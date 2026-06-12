@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>サポート | Taehi Apps</title>
+  <meta name="description" content="Taehi Apps・そらにっきのサポート・お問い合わせ窓口です。">
+  <link rel="stylesheet" href="/assets/site.css?v=18">
+</head>
+<body>
+  <header class="site-header">
+  <div class="site-header-inner">
+    <a class="site-brand" href="/">Taehi Apps</a>
+    <nav class="site-nav" aria-label="サイト内ナビゲーション">
+      <div class="site-nav-dropdown" data-nav-dropdown>
+        <button type="button" class="site-nav-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="services-menu">
+          サービス
+          <span class="site-nav-chevron" aria-hidden="true"></span>
+        </button>
+        <ul class="site-nav-menu" id="services-menu" role="menu">
+        <li role="none"><a href="/soranikki/" class="site-nav-menu-link" role="menuitem">そらにっき</a></li>
+        </ul>
+      </div>
+      <a href="/support/" class="site-nav-link is-active">サポート</a>
+    </nav>
+  </div>
+</header>
+  <main class="page-main support-main">
+    <h1>サポート</h1>
+    <p class="support-lead">お問い合わせは、以下のフォームから直接送信できます。</p>
+
+    <div class="support-flow" data-support-root>
+      <section class="support-form-panel" data-support-panel="form">
+        <h2>お問い合わせフォーム</h2>
+        <form data-support-form novalidate>
+          <div class="support-honeypot" aria-hidden="true">
+            <label for="support-website">Website</label>
+            <input id="support-website" type="text" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="support-field">
+            <label for="support-service">どのサービスについてですか？</label>
+            <select id="support-service" name="service" required data-support-service>
+              <option value="soranikki">そらにっき</option>
+            </select>
+          </div>
+          <div class="support-field">
+            <span class="support-field-label">どうされましたか？</span>
+            <div class="support-chip-group" data-support-categories></div>
+          </div>
+          <div class="support-field">
+            <label for="support-email">返信用メールアドレス</label>
+            <input id="support-email" type="email" name="email" required autocomplete="email" placeholder="example@email.com">
+          </div>
+          <div class="support-field">
+            <label for="support-message">お問い合わせ内容</label>
+            <textarea id="support-message" name="message" maxlength="2000" required placeholder="ご利用状況やお困りの点を、できる範囲でご記入ください"></textarea>
+            <p class="support-counter"><span data-support-message-count>0</span>/2000</p>
+          </div>
+          <div class="support-error" data-support-error hidden>
+            <p data-support-error-text></p>
+          </div>
+          <button type="submit" class="support-submit" data-support-submit>送信する</button>
+        </form>
+      </section>
+
+      <section class="support-done" data-support-panel="done" hidden>
+        <h2 class="support-done-title">お問い合わせを受け付けました</h2>
+        <p>受付確認メールをお送りしました（届かない場合は迷惑メールフォルダもご確認ください）。</p>
+        <p class="support-done-id">受付番号：<code data-support-done-id></code></p>
+        <p class="support-done-warning" data-support-done-warning hidden></p>
+        <button type="button" class="support-submit" data-support-new>別のお問い合わせを送る</button>
+      </section>
+    </div>
+
+    <p class="support-note"><strong>個人情報の取扱い：</strong>お問い合わせでいただいた内容は、対応および記録のために利用します。詳細は<a href="/privacy/">プライバシーポリシー</a>をご確認ください。</p>
+
+    <section class="support-faq" aria-labelledby="support-faq-heading">
+      <h2 id="support-faq-heading">よくあるご質問</h2>
+      <div class="support-faq-item">
+        <h3>アカウントを削除したい</h3>
+        <p>各アプリの「設定」から退会（アカウント削除）を行えます。削除後、そのアプリのデータは復元できません。</p>
+      </div>
+      <div class="support-faq-item">
+        <h3>通知が届かない</h3>
+        <p>端末の通知設定と、アプリ内の通知設定の両方をご確認ください。位置情報を利用する場所の通知は、バックグラウンドでの位置情報の許可が必要な場合があります。</p>
+      </div>
+      <div class="support-faq-item">
+        <h3>使い方を知りたい</h3>
+        <p>アプリ内の「設定」→「ヘルプ」に基本的な使い方を掲載しています。</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+  <div class="site-footer-inner">
+    <p class="site-footer-brand">Taehi Apps</p>
+    <div class="site-footer-links">
+      <a href="/privacy/">プライバシーポリシー</a>
+      <a href="/terms/">利用規約</a>
+      <a href="/support/">サポート</a>
+    </div>
+    <p class="site-footer-copy">© 2026 Taehi Apps</p>
+  </div>
+</footer>
+  <script src="/assets/site.js?v=6" defer></script>
+  <script src="/assets/support-config.js" defer></script>
+  <script src="/assets/support.js?v=2" defer></script>
+</body>
+</html>
